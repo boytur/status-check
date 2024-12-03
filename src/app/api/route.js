@@ -9,6 +9,9 @@ export async function GET (req) {
       const portainerApiUrl = process.env.PORTAINER_API_URL
       const portainerApiToken = process.env.PORTAINER_API_TOKEN
 
+      console.log('API URL:', process.env.PORTAINER_API_URL)
+      console.log('API Token:', process.env.PORTAINER_API_TOKEN)
+
       if (!portainerApiUrl || !portainerApiToken) {
         throw new Error('Environment variables not configured properly')
       }
