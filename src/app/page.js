@@ -25,6 +25,21 @@ const StatusIndicator = ({ status, label }) => {
   )
 }
 
+const SkeletonCard = () => (
+  <Card className='shadow-xl border-gray-200 animate-pulse'>
+    <CardHeader className='flex flex-row justify-between items-center'>
+      <div className='h-6 bg-gray-200 rounded-md w-3/4'></div>
+      <div className='h-5 w-20 bg-gray-300 rounded-full'></div>
+    </CardHeader>
+    <CardContent>
+      <div className='grid grid-cols-2 gap-3'>
+        <div className='h-6 bg-gray-200 rounded-md'></div>
+        <div className='h-6 bg-gray-200 rounded-md'></div>
+      </div>
+    </CardContent>
+  </Card>
+)
+
 const StatusPage = () => {
   const [services, setServices] = useState([])
   const [loading, setLoading] = useState(false)
@@ -84,72 +99,78 @@ const StatusPage = () => {
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-          {services.length > 0 &&
-            services.map((service, index) => (
-              <Card
-                key={index}
-                className='shadow-xl border-gray-200 hover:shadow-2xl transition-shadow duration-300'
-              >
-                <CardHeader className='flex flex-row justify-between items-center'>
-                  <CardTitle
-                    onClick={() =>
-                      service.url && window.open(service.url, '_blank')
-                    }
-                    className={`text-xl font-bold text-gray-800 flex items-center gap-2 ${
-                      service.url ? 'hover:underline cursor-pointer' : ''
-                    }`}
-                  >
-                    {service.name}
-                    {service.url && (
-                      <a
-                        href={service.url}
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='text-gray-600 hover:text-gray-800 transition-colors duration-200'
-                      >
-                        <ExternalLink className='w-5 h-5' />
-                      </a>
-                    )}
-                  </CardTitle>
-                  <div
-                    className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                      getOverallStatus(service) === 'Operational'
-                        ? 'bg-green-100 text-green-800'
-                        : getOverallStatus(service) === 'Service Missing'
-                        ? 'bg-gray-100 text-gray-800'
-                        : 'bg-yellow-100 text-yellow-800'
-                    }`}
-                  >
-                    {getOverallStatus(service)}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className='grid grid-cols-2 gap-3'>
-                    {service.webStatus && (
-                      <StatusIndicator
-                        status={service.webStatus}
-                        label='Website'
-                      />
-                    )}
-                    {service.databaseStatus && (
-                      <StatusIndicator
-                        status={service.databaseStatus}
-                        label='Database'
-                      />
-                    )}
-                    {service.apiStatus && service.apiStatus !== null && (
-                      <StatusIndicator status={service.apiStatus} label='API' />
-                    )}
-                    {service.dbmanagementStatus && (
-                      <StatusIndicator
-                        status={service.dbmanagementStatus}
-                        label='DB Management'
-                      />
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          {loading
+            ? Array(10)
+                .fill(null)
+                .map((_, index) => <SkeletonCard key={index} />)
+            : services.map((service, index) => (
+                <Card
+                  key={index}
+                  className='shadow-xl border-gray-200 hover:shadow-2xl transition-shadow duration-300'
+                >
+                  <CardHeader className='flex flex-row justify-between items-center'>
+                    <CardTitle
+                      onClick={() =>
+                        service.url && window.open(service.url, '_blank')
+                      }
+                      className={`text-xl font-bold text-gray-800 flex items-center gap-2 ${
+                        service.url ? 'hover:underline cursor-pointer' : ''
+                      }`}
+                    >
+                      {service.name}
+                      {service.url && (
+                        <a
+                          href={service.url}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          className='text-gray-600 hover:text-gray-800 transition-colors duration-200'
+                        >
+                          <ExternalLink className='w-5 h-5' />
+                        </a>
+                      )}
+                    </CardTitle>
+                    <div
+                      className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                        getOverallStatus(service) === 'Operational'
+                          ? 'bg-green-100 text-green-800'
+                          : getOverallStatus(service) === 'Service Missing'
+                          ? 'bg-gray-100 text-gray-800'
+                          : 'bg-yellow-100 text-yellow-800'
+                      }`}
+                    >
+                      {getOverallStatus(service)}
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className='grid grid-cols-2 gap-3'>
+                      {service.webStatus && (
+                        <StatusIndicator
+                          status={service.webStatus}
+                          label='Website'
+                        />
+                      )}
+                      {service.databaseStatus && (
+                        <StatusIndicator
+                          status={service.databaseStatus}
+                          label='Database'
+                        />
+                      )}
+                      {service.apiStatus && service.apiStatus !== null && (
+                        <StatusIndicator
+                          status={service.apiStatus}
+                          label='API'
+                        />
+                      )}
+                      {service.dbmanagementStatus && (
+                        <StatusIndicator
+                          status={service.dbmanagementStatus}
+                          label='DB Management'
+                        />
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
         </div>
       </div>
     </div>

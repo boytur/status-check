@@ -1,5 +1,13 @@
 module.exports = [
   {
+    name: 'Generate Retrospective',
+    url: 'https://retro.bsospace.com',
+    database: null,
+    web: 'gen-retro',
+    dbmanagement: null,
+    api: null
+  },
+  {
     name: 'BSO Landing page',
     url: 'https://bsospace.com',
     database: null,
@@ -24,6 +32,30 @@ module.exports = [
     dbmanagement: null
   },
   {
+    name: 'Sport Sphere',
+    url: 'https://ifgames.bsospace.com',
+    database: null,
+    web: 'sport-sphere',
+    api: null,
+    dbmanagement: null
+  },
+  {
+    name: 'Open ID',
+    url: 'https://open.bsospace.com',
+    database: 'openid_db_1',
+    web: null,
+    api: 'openid_app_1',
+    dbmanagement: 'openid_pgadmin_1'
+  },
+  {
+    name: 'Pdf management',
+    url: null,
+    database: null,
+    web: 'stirling-pdf-stirling-pdf-1',
+    api: null,
+    dbmanagement: null
+  },
+  {
     name: 'SOS System',
     url: null,
     database: 'SOS_mysql',
@@ -38,5 +70,29 @@ module.exports = [
     web: 'equipment-front_web_1',
     api: 'equipment-back-app-1',
     dbmanagement: 'equipment-back-phpmyadmin-1'
+  },
+  {
+    name: 'PRAMERN',
+    url: null,
+    database: 'bso-mongo',
+    web: 'pramern-frontend',
+    api: 'pramern-back-pramern-backend-1',
+    dbmanagement: null
+  },
+  {
+    name: 'Jenkins',
+    url: null,
+    database: null,
+    web: 'BSO-jenkins-server',
+    api: null,
+    dbmanagement: null
+  },
+  {
+    name: 'Sonarqube',
+    url: null,
+    database: null,
+    web: 'sonarqube-dso-demo',
+    api: null,
+    dbmanagement: null
   }
 ]
