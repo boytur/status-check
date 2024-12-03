@@ -1,5 +1,13 @@
 module.exports = [
   {
+    name: 'Generate Retrospective',
+    url: 'https://retro.bsospace.com',
+    database: null,
+    web: 'gen-retro',
+    dbmanagement: null,
+    api: null
+  },
+  {
     name: 'BSO Landing page',
     url: 'https://bsospace.com',
     database: null,
@@ -38,5 +46,13 @@ module.exports = [
     web: 'equipment-front_web_1',
     api: 'equipment-back-app-1',
     dbmanagement: 'equipment-back-phpmyadmin-1'
+  },
+  {
+    name: 'PRAMERN',
+    url: null,
+    database: 'bso-mongo',
+    web: 'pramern-frontend',
+    api: 'pramern-back-pramern-backend-1',
+    dbmanagement: null
   }
 ]
