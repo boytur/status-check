@@ -8,11 +8,11 @@ const StatusIndicator = ({ status, label }) => {
   const isRunning = status === 'running'
 
   return (
-    <div className='flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1.5'>
+    <div className='flex items-center pr-2 gap-2 bg-gray-100 rounded-full px-1 py-1'>
       {isRunning ? (
-        <CheckCircle2 className='text-green-500 w-4 h-4' />
+        <CheckCircle2 className='text-green-500' />
       ) : (
-        <XCircle className='text-red-500 w-4 h-4' />
+        <XCircle className='text-red-500' />
       )}
       <span
         className={`text-xs font-medium ${
@@ -142,7 +142,7 @@ const StatusPage = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className='grid grid-cols-2 gap-3'>
+                    <div className='gap-3 flex flex-wrap'>
                       {service.webStatus && (
                         <StatusIndicator
                           status={service.webStatus}
