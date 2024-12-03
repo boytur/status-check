@@ -29,6 +29,8 @@ export async function GET (req) {
 
       const containersData = await response.json()
 
+      console.log('Containers data:', containersData)
+
       // Fetch container data from Portainer API
       const containerStatuses = containersData.map(container => {
         // replace container name has / to ''
