@@ -1,6 +1,6 @@
 module.exports = [
   {
-    name: 'Generate Retrospective',
+    name: '📝 Generate Retrospective',
     url: 'https://retro.bsospace.com',
     database: null,
     web: 'gen-retro',
@@ -8,7 +8,7 @@ module.exports = [
     api: null
   },
   {
-    name: 'BSO Landing page',
+    name: '🚀 BSO Landing page',
     url: 'https://bsospace.com',
     database: null,
     web: 'bsospace-landing-page',
@@ -16,7 +16,7 @@ module.exports = [
     api: null
   },
   {
-    name: 'BSO Blog',
+    name: '💡 BSO Blog',
     url: 'https://blog.bsospace.com',
     database: 'posyayee-pg-db',
     web: 'bso-blog-production',
@@ -24,7 +24,7 @@ module.exports = [
     api: null
   },
   {
-    name: 'Sharebill',
+    name: '💸 Share Bill',
     url: 'https://sharebill.bsospace.com',
     database: 'share-bill-mongo',
     web: 'share-bill-frontend-1',
@@ -32,7 +32,7 @@ module.exports = [
     dbmanagement: null
   },
   {
-    name: 'Sport Sphere',
+    name: '🏀 Sport Sphere',
     url: 'https://ifgames.bsospace.com',
     database: null,
     web: 'sport-sphere',
@@ -42,13 +42,13 @@ module.exports = [
   {
     name: 'Open ID',
     url: 'https://open.bsospace.com',
-    database: 'openid_db_1',
-    web: null,
-    api: 'openid_app_1',
-    dbmanagement: 'openid_pgadmin_1'
+    database: 'back-bso-openid-db-1',
+    web: 'front-bso-openid-web-1',
+    api: 'back-bso-openid-app-1',
+    dbmanagement: 'back-bso-openid-pgadmin-1'
   },
   {
-    name: 'Pdf management',
+    name: 'PDF Management',
     url: null,
     database: null,
     web: 'stirling-pdf-stirling-pdf-1',
@@ -94,5 +94,13 @@ module.exports = [
     web: 'sonarqube-dso-demo',
     api: null,
     dbmanagement: null
-  }
+  },
+  {
+    name: '📮 Mail Server',
+    url: null,
+    database: null,
+    web: null,
+    api: 'stalwart-mail',
+    dbmanagement: null
+  },
 ]
