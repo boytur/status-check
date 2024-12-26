@@ -40,7 +40,7 @@ module.exports = [
     dbmanagement: null
   },
   {
-    name: 'Open ID',
+    name: '✅ Open ID',
     url: 'https://open.bsospace.com',
     database: 'back-bso-openid-db-1',
     web: 'front-bso-openid-web-1',
@@ -48,7 +48,7 @@ module.exports = [
     dbmanagement: 'back-bso-openid-pgadmin-1'
   },
   {
-    name: 'PDF Management',
+    name: '📄 PDF Management',
     url: null,
     database: null,
     web: 'stirling-pdf-stirling-pdf-1',
@@ -56,7 +56,7 @@ module.exports = [
     dbmanagement: null
   },
   {
-    name: 'SOS System',
+    name: '💼 SOS System',
     url: null,
     database: 'SOS_mysql',
     web: 'sos-web',
@@ -64,7 +64,7 @@ module.exports = [
     api: null
   },
   {
-    name: 'EQS System',
+    name: '📦 EQS System',
     url: null,
     database: 'equipment-back-database-1',
     web: 'equipment-front_web_1',
@@ -72,7 +72,7 @@ module.exports = [
     dbmanagement: 'equipment-back-phpmyadmin-1'
   },
   {
-    name: 'PRAMERN',
+    name: '📋 PRAMERN',
     url: null,
     database: 'bso-mongo',
     web: 'pramern-frontend',
@@ -88,7 +88,7 @@ module.exports = [
     dbmanagement: null
   },
   {
-    name: 'Sonarqube',
+    name: 'SonarQube',
     url: null,
     database: null,
     web: 'sonarqube-dso-demo',
