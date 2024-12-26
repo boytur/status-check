@@ -67,7 +67,7 @@ module.exports = [
     name: '📦 EQS System',
     url: null,
     database: 'equipment-back-database-1',
-    web: 'equipment-front_web_1',
+    web: 'equipment-front-web-1',
     api: 'equipment-back-app-1',
     dbmanagement: 'equipment-back-phpmyadmin-1'
   },
