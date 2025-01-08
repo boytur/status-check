@@ -91,7 +91,7 @@ module.exports = [
     name: 'SonarQube',
     url: null,
     database: null,
-    web: 'sonarqube-dso-demo',
+    web: 'sonarqube',
     api: null,
     dbmanagement: null
   },
