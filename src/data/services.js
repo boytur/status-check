@@ -26,7 +26,7 @@ module.exports = [
   {
     name: '💸 Share Bill',
     url: 'https://sharebill.bsospace.com',
-    database: 'share-bill-mongo',
+    database: 'bso-mongo',
     web: 'share-bill-frontend-1',
     api: null,
     dbmanagement: null
@@ -41,11 +41,11 @@ module.exports = [
   },
   {
     name: '✅ Open ID',
-    url: 'https://open.bsospace.com',
-    database: 'back-bso-openid-db-1',
-    web: 'front-bso-openid-web-1',
-    api: 'back-bso-openid-app-1',
-    dbmanagement: 'back-bso-openid-pgadmin-1'
+    url: '',
+    database: 'bso-openid-back-db-1',
+    web: 'bso-openid-front-web-1',
+    api: 'bso-openid-back-app-1',
+    dbmanagement: 'bso-openid-back-pgadmin-1'
   },
   {
     name: '📄 PDF Management',
@@ -83,14 +83,14 @@ module.exports = [
     name: 'Jenkins',
     url: null,
     database: null,
-    web: 'BSO-jenkins-server',
+    web: 'bso-jenkins-server',
     api: null,
     dbmanagement: null
   },
   {
     name: 'SonarQube',
     url: null,
-    database: null,
+    database: "postgresql",
     web: 'sonarqube',
     api: null,
     dbmanagement: null
