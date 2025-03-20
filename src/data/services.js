@@ -58,9 +58,9 @@ module.exports = [
   {
     name: '💼 SOS System',
     url: null,
-    database: 'SOS_mysql',
-    web: 'sos-web',
-    dbmanagement: 'SOS_MYADMIN',
+    database: 'sos_db',
+    web: 'smart-office-web',
+    dbmanagement: 'sos_phpMyadmin',
     api: null
   },
   {
