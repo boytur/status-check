@@ -366,12 +366,6 @@ const StatusPage = () => {
                   {service.uptime}
                 </span>
               </div>
-              <div className='text-xs text-gray-500'>
-                Last incident:{' '}
-                <span className='font-semibold text-gray-700'>
-                  {formatDate(service.lastIncident)}
-                </span>
-              </div>
             </div>
 
             <div className='flex gap-2 mt-3'>
