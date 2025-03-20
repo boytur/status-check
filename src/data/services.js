@@ -18,9 +18,9 @@ module.exports = [
   {
     name: '💡 BSO Blog',
     url: 'https://blog.bsospace.com',
-    database: 'posyayee-pg-db',
+    database: 'centralized_postgres',
     web: 'bso-blog-production',
-    dbmanagement: 'posyayee-pgadmin4-container',
+    dbmanagement: 'centralized_pgadmin',
     api: null
   },
   {
@@ -66,10 +66,10 @@ module.exports = [
   {
     name: '📦 EQS System',
     url: null,
-    database: 'equipment-back-database-1',
+    database: 'equipment-back_main-database-1',
     web: 'equipment-front-web-1',
-    api: 'equipment-back-app-1',
-    dbmanagement: 'equipment-back-phpmyadmin-1'
+    api: 'equipment-back_main-app-1',
+    dbmanagement: 'equipment-back_main-phpmyadmin-1'
   },
   {
     name: '📋 PRAMERN',
